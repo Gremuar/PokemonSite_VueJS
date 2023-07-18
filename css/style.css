@@ -1,0 +1,203 @@
+@font-face {
+	font-family: "Yanone";
+	src: url(../fonts/YanoneKaffeesatz-VariableFont_wght.ttf);
+}
+
+body {
+	font-family: Yanone, sans-serif;
+}
+
+i.fa-solid {
+	font-size: 30px;
+	margin-right: 10px;
+}
+
+.main {
+	background: url(../img/Butterfree.png) 1% 94% repeat-y, url(../img/Pikachu.png) 7% 95% repeat-y,
+		url(../img/Psyduck.png) 12% 97% repeat-y, url(../img/Meowth.png) 17% 102% repeat-y,
+		url(../img/Jigglypuff.png) 23% 96% repeat-y, url(../img/Butterfree.png) 29% 94% repeat-y,
+		url(../img/Pikachu.png) 35% 95% repeat-y, url(../img/Psyduck.png) 40% 97% repeat-y,
+		url(../img/Meowth.png) 46% 102% repeat-y, url(../img/Jigglypuff.png) 52% 96% repeat-y,
+		url(../img/Butterfree.png) 58% 94% repeat-y, url(../img/Pikachu.png) 64% 95% repeat-y,
+		url(../img/Psyduck.png) 69% 97% repeat-y, url(../img/Meowth.png) 75% 102% repeat-y,
+		url(../img/Jigglypuff.png) 81% 96% repeat-y, url(../img/Butterfree.png) 87% 94% repeat-y,
+		url(../img/Pikachu.png) 93% 95% repeat-y, url(../img/Psyduck.png) 98% 97% repeat-y,
+		url(../img/Meowth.png) 103% 102% repeat-y;
+	background-size: 5%;
+    animation: bag-anim 20s linear alternate infinite forwards;
+}
+
+@keyframes bag-anim{
+    0% {
+        background: url(../img/Butterfree.png) 1% 94% repeat-y, url(../img/Pikachu.png) 7% 95% repeat-y,
+		url(../img/Psyduck.png) 12% 97% repeat-y, url(../img/Meowth.png) 17% 102% repeat-y,
+		url(../img/Jigglypuff.png) 23% 96% repeat-y, url(../img/Butterfree.png) 29% 94% repeat-y,
+		url(../img/Pikachu.png) 35% 95% repeat-y, url(../img/Psyduck.png) 40% 97% repeat-y,
+		url(../img/Meowth.png) 46% 102% repeat-y, url(../img/Jigglypuff.png) 52% 96% repeat-y,
+		url(../img/Butterfree.png) 58% 94% repeat-y, url(../img/Pikachu.png) 64% 95% repeat-y,
+		url(../img/Psyduck.png) 69% 97% repeat-y, url(../img/Meowth.png) 75% 102% repeat-y,
+		url(../img/Jigglypuff.png) 81% 96% repeat-y, url(../img/Butterfree.png) 87% 94% repeat-y,
+		url(../img/Pikachu.png) 93% 95% repeat-y, url(../img/Psyduck.png) 98% 97% repeat-y,
+		url(../img/Meowth.png) 103% 102% repeat-y;
+        background-size: 5%;
+    }
+    100% {
+        background: url(../img/Butterfree.png) 1% -6% repeat-y, url(../img/Pikachu.png) 7% 195% repeat-y,
+		url(../img/Psyduck.png) 12% -3% repeat-y, url(../img/Meowth.png) 17% 202% repeat-y,
+		url(../img/Jigglypuff.png) 23% -4% repeat-y, url(../img/Butterfree.png) 29% 194% repeat-y,
+		url(../img/Pikachu.png) 35% -5% repeat-y, url(../img/Psyduck.png) 40% 197% repeat-y,
+		url(../img/Meowth.png) 46% 2% repeat-y, url(../img/Jigglypuff.png) 52% 196% repeat-y,
+		url(../img/Butterfree.png) 58% -6% repeat-y, url(../img/Pikachu.png) 64% 195% repeat-y,
+		url(../img/Psyduck.png) 69% -3% repeat-y, url(../img/Meowth.png) 75% 202% repeat-y,
+		url(../img/Jigglypuff.png) 81% -4% repeat-y, url(../img/Butterfree.png) 87% 194% repeat-y,
+		url(../img/Pikachu.png) 93% -5% repeat-y, url(../img/Psyduck.png) 98% 197% repeat-y,
+		url(../img/Meowth.png) 103% 2% repeat-y;
+        background-size: 5%;
+    }
+}
+
+.app {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	overflow: hidden;
+}
+
+.app__header {
+	background-color: rgba(0, 0, 0, 0.5);
+	min-height: 26vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	overflow: hidden;
+}
+
+.app__logo {
+	display: block;
+	width: 100vw;
+	margin: 0 auto;
+}
+
+.app__body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	height: 100%;
+	overflow: auto;
+	flex-wrap: wrap;
+}
+
+.page__pokemon-info .app__body {
+	flex-wrap: nowrap;
+}
+
+.flex-start {
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.app__btn {
+	padding: 10px 20px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	text-align: center;
+	min-height: 50px;
+	width: 200px;
+	background-color: #1978d3;
+	box-shadow: 0px 7px 0 0 #01579a;
+	margin: 0 auto;
+	text-decoration: none;
+	font-size: 16px;
+	line-height: 20px;
+	color: white;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.app__btn:focus {
+	outline: none;
+}
+
+.mainMenu {
+	display: flex;
+	align-items: flex-start;
+	align-content: flex-start;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	position: fixed;
+}
+
+.breadcrumbs {
+	top: -5vmax;
+	position: relative;
+	font-size: 50px;
+    max-block-size: 142px 70px;
+	padding: 10px 0 10px 25px;
+	background: #fddd3c;
+	color: white;
+	text-shadow: 0 0 2px #c3394f;
+}
+
+.pokemon-info {
+	width: 95%;
+	align-self: center;
+	margin-top: 15px;
+	border: 10px solid yellow;
+	border-radius: 15px;
+	padding: 5px;
+	background: #ffffffe3;
+	font-size: 17px;
+	line-height: 20px;
+}
+
+.pokemon-info .description::before,
+.pokemon-info .info::before,
+.pokemon-info .anatomy::before,
+.pokemon-info .character::before,
+.pokemon-info .abilites::before,
+.pokemon-info .habitat::before {
+	position: absolute;
+	padding: 5px;
+	border-radius: 5px;
+	top: -30px;
+	left: 0px;
+	background: yellow;
+	color: red;
+	font-size: 20px;
+	font-weight: bold;
+}
+.pokemon-info .description::before {
+	content: "Краткое описание";
+}
+
+.pokemon-info .info::before {
+	content: "Описание";
+}
+
+.pokemon-info .anatomy::before {
+	content: "Анатомия";
+}
+
+.pokemon-info .character::before {
+	content: "Характер";
+}
+
+.pokemon-info .abilites::before {
+	content: "Способности";
+}
+
+.pokemon-info .habitat::before {
+	content: "Среда обитания";
+}
+
+.pokemon-info .description,
+.pokemon-info .info,
+.pokemon-info .anatomy,
+.pokemon-info .character,
+.pokemon-info .abilites,
+.pokemon-info .habitat {
+	position: relative;
+	margin-top: 30px;
+}

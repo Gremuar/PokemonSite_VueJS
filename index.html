@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Pokemon Info</title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/FA/css/fontawesome.min.css" />
+		<link rel="stylesheet" href="css/FA/css/solid.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<div class="main">
+            <!-- page 1: main -->
+			<div class="app" v-show="showMain">
+				<div class="app__header">
+					<img src="img/bg-header.jpg" alt="" class="app__logo" />
+					<div class="breadcrumbs">Главная</div>
+				</div>
+				<div class="app__body">
+					<div
+						class="app__btn"
+						v-for="(pokemon, name, index) in pokemons"
+						@click="goToPokeInfo(index)"
+					>
+						<i class="fa-solid fa-circle-play" aria-hidden="true"></i>
+						<div class="app__button-text">{{pokemon.name}}</div>
+					</div>
+
+					<div class="app__btn btn__sound">
+						<i class="fa-solid fa-volume-high"></i>
+						<div class="app__button-text">Звуки</div>
+					</div>
+				</div>
+			</div>
+
+            <!-- page 2: pokemon_info -->
+			<div class="app page__pokemon-info" v-show="showPokeInfo">
+				<div class="app__header">
+					<img src="img/bg-header.jpg" alt="" class="app__logo" />
+					<div class="breadcrumbs">{{pokemons[activePoke].name}}</div>
+					<nav class="mainMenu">
+						<div class="app__btn" v-on:click="goToMain">
+							<i class="fa-solid fa-circle-play" aria-hidden="true"></i>
+							<div class="app__button-text">Главная</div>
+						</div>
+						<div class="app__btn btn__sound">
+							<i class="fa-solid fa-volume-high"></i>
+							<div class="app__button-text">Sound</div>
+						</div>
+					</nav>
+				</div>
+				<div class="app__body flex-start">
+					<div class="pokemon-info">
+						<div class="description">
+							{{pokemons[activePoke].name}} - {{pokemons[activePoke].description}}
+						</div>
+						<div class="info" v-if="pokemons[activePoke].info">{{pokemons[activePoke].info}}</div>
+						<div class="anatomy" v-if="pokemons[activePoke].anatomy">
+							{{pokemons[activePoke].anatomy}}
+						</div>
+						<div class="character" v-if="pokemons[activePoke].character">
+							{{pokemons[activePoke].character}}
+						</div>
+						<div class="abilites" v-if="pokemons[activePoke].abilites">
+							{{pokemons[activePoke].abilites}}
+						</div>
+						<div class="habitat" v-if="pokemons[activePoke].habitat">
+							{{pokemons[activePoke].habitat}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/vue_develop.js"></script>
+		<script src="js/const.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>
