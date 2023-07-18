@@ -24,7 +24,8 @@ let app = new Vue({
             return this.pokemons[Object.keys(this.pokemons)[ind]];
         },
         playSound(url) {
-            this.audioPlayer.src = url;
+            this.audioPlayer.src = location.host.includes('github.io') ?
+             'https://raw.githubusercontent.com/Gremuar/PokemonSite_VueJS/master'+url : url;
             this.audioPlayer.volume = this.audioVolume;
             this.audioPlayer.play();
         },
